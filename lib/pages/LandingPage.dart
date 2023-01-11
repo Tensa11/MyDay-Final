@@ -1,5 +1,7 @@
+
 import 'package:flutter/material.dart';
-import 'package:myapp/utils.dart';
+import 'package:myapp/pages/login.dart';
+import '../utils.dart';
 
 class LandingPage extends StatelessWidget {
   const LandingPage({super.key});
@@ -53,7 +55,8 @@ class LandingPage extends StatelessWidget {
                   height: 52*fem,
                   child: TextButton(
                     onPressed: (){
-
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => LoginDemo()));
                     },
                     style: TextButton.styleFrom (
                       padding: EdgeInsets.zero,
@@ -70,7 +73,7 @@ class LandingPage extends StatelessWidget {
             Positioned(
               left: 27*fem,
               top: 136*fem,
-              child: SizedBox(
+              child: Container(
                 width: 206*fem,
                 height: 116*fem,
                 child: Column(
