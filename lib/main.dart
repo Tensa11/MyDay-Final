@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/pages/ProfileEditPage.dart';
+import 'package:myapp/pages/ProfilePage.dart';
 import 'package:myapp/utils.dart';
 import 'pages/LandingPage.dart';
 
@@ -18,7 +20,7 @@ class MyDayApp extends StatelessWidget {
 		),
 		home: const Scaffold(
 		body: SingleChildScrollView(
-			child: LandingPage(),
+			child: ProfileEditPage(),
 				),
 			),
 		);
