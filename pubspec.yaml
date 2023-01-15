@@ -32,6 +32,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  image_picker: ^0.8.6
+  profile: ^0.0.1
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -66,35 +68,19 @@ flutter:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
   assets:
+    - assets/app/images/avatar.png
+    - assets/app/images/back1.png
+    - assets/app/images/back2.png
+    - assets/app/images/cover.png
+    - assets/app/images/forgot-bg.png
     - assets/app/images/icon-pencil.png
-    - assets/app/images/back.png
-    - assets/app/images/arrow-left.png
-    - assets/app/images/small-action.png
-    - assets/app/images/back-FYV.png
-    - assets/app/images/upload-post.png
-    - assets/app/images/photo-gallery.png
-    - assets/app/images/back-26V.png
-    - assets/app/images/small-action-9wf.png
-    - assets/app/images/button.png
-    - assets/app/images/unsplash-jmurdhtm7ng-bg.png
-    - assets/app/images/user-bg.png
-    - assets/app/images/user-bg-UGq.png
-    - assets/app/images/user-bg-kPK.png
-    - assets/app/images/user-bg-g25.png
-    - assets/app/images/user.png
-    - assets/app/images/unsplash-jmurdhtm7ng.png
-    - assets/app/images/bg-bg.png
-    - assets/app/images/unsplash-3zvhsfizyme-bg.png
-    - assets/app/images/bg-bg-kqo.png
-    - assets/app/images/unsplash-r1f9ahzh-ee-bg.png
-    - assets/app/images/unsplash-3zvhsfizyme-bg-EYR.png
-    - assets/app/images/picture.png
-    - assets/app/images/bg-bg-Kzy.png
-    - assets/app/images/pitnav-1.png
-    - assets/app/images/picture-Ji5.png
+    - assets/app/images/landing-bg.png
+    - assets/app/images/login-bg.png
     - assets/app/images/logo.png
-    - assets/app/images/pitnav-1-pbb.png
-    - assets/app/images/logo-sVb.png
+    - assets/app/images/photo-gallery.png
+    - assets/app/images/post-pic.png
+    - assets/app/images/next1.png
+    - assets/app/images/next2.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
