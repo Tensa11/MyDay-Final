@@ -14,7 +14,6 @@ class ProfileEditPage extends StatefulWidget {
 class _ProfileEditPageState extends State<ProfileEditPage> {
   File? pfp;
 
-
   Future pickImage(ImageSource source) async {
     try {
       final pfp = await ImagePicker().pickImage(source: source);
@@ -27,17 +26,15 @@ class _ProfileEditPageState extends State<ProfileEditPage> {
     }
   }
 
-
-
   @override
   Widget build(BuildContext context) {
     double baseWidth = 360;
-    double fem = MediaQuery.of(context).size.width / baseWidth;
-    double ffem = fem * 0.97;
+    double size = MediaQuery.of(context).size.width / baseWidth;
+    double sizes = size * 0.97;
     return SizedBox(
       width: double.infinity,
       child: Container(
-        padding: EdgeInsets.fromLTRB(0 * fem, 0 * fem, 0 * fem, 45.78 * fem),
+        padding: EdgeInsets.fromLTRB(0 * size, 0 * size, 0 * size, 45.78 * size),
         width: double.infinity,
         decoration: const BoxDecoration(
           color: Color(0xff19191c),
@@ -47,23 +44,23 @@ class _ProfileEditPageState extends State<ProfileEditPage> {
           children: [
             SizedBox(
               // navHq4 (136:54)
-              width: 361 * fem,
-              height: 95 * fem,
+              width: 361 * size,
+              height: 95 * size,
               child: Stack(
                 children: [
                   Positioned(
                     // dP8 (41536952)
-                    left: 0 * fem,
-                    top: 0 * fem,
+                    left: 0 * size,
+                    top: 0 * size,
                     child: SizedBox(
-                      width: 360 * fem,
-                      height: 95 * fem,
+                      width: 360 * size,
+                      height: 95 * size,
                       child: Align(
                         // rectangle45mkE (1:920)
                         alignment: Alignment.centerLeft,
                         child: SizedBox(
-                          width: 361 * fem,
-                          height: 95 * fem,
+                          width: 361 * size,
+                          height: 95 * size,
                           child: Container(
                             decoration: const BoxDecoration(
                               color: Color(0xff0075ff),
@@ -75,19 +72,19 @@ class _ProfileEditPageState extends State<ProfileEditPage> {
                   ),
                   Positioned(
                     // WC2 (70950504)
-                    left: 143.4743652344 * fem,
-                    top: 49.984588623 * fem,
+                    left: 143.4743652344 * size,
+                    top: 49.984588623 * size,
                     child: SizedBox(
-                      width: 74 * fem,
-                      height: 21 * fem,
+                      width: 74 * size,
+                      height: 21 * size,
                       child: Center(
                         child: Text(
                           'Edit Profile',
                           style: SafeGoogleFont(
                             'Poppins',
-                            fontSize: 13.8846149445 * ffem,
+                            fontSize: 13.8846149445 * sizes,
                             fontWeight: FontWeight.w600,
-                            height: 1.5 * ffem / fem,
+                            height: 1.5 * sizes / size,
                             color: const Color(0xffffffff),
                           ),
                         ),
@@ -96,16 +93,16 @@ class _ProfileEditPageState extends State<ProfileEditPage> {
                   ),
                   Positioned(
                     // aSn (47005503)
-                    left: 15.7359008789 * fem,
-                    top: 46.282043457 * fem,
+                    left: 15.7359008789 * size,
+                    top: 46.282043457 * size,
                     child: Align(
                       child: SizedBox(
-                        width: 24.07 * fem,
-                        height: 27.77 * fem,
+                        width: 24.07 * size,
+                        height: 27.77 * size,
                         child: Image.asset(
                           'assets/app/images/arrow-left.png',
-                          width: 24.07 * fem,
-                          height: 27.77 * fem,
+                          width: 24.07 * size,
+                          height: 27.77 * size,
                         ),
                       ),
                     ),
@@ -115,28 +112,28 @@ class _ProfileEditPageState extends State<ProfileEditPage> {
             ),
             Container(
               margin:
-              EdgeInsets.fromLTRB(0 * fem, 0 * fem, 0 * fem, 26.56 * fem),
-              width: 361 * fem,
-              height: 249.44 * fem,
+              EdgeInsets.fromLTRB(0 * size, 0 * size, 0 * size, 26.56 * size),
+              width: 361 * size,
+              height: 249.44 * size,
               child: Stack(
                 children: [
                   Positioned(
-                    left: 115 * fem,
-                    top: 101 * fem,
+                    left: 115 * size,
+                    top: 101 * size,
                     child: SizedBox(
-                      width: 131.44 * fem,
-                      height: 148.44 * fem,
+                      width: 131.44 * size,
+                      height: 148.44 * size,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Container(
                             margin: EdgeInsets.fromLTRB(
-                                0 * fem, 0 * fem, 0 * fem, 0 * fem),
+                                0 * size, 0 * size, 0 * size, 0 * size),
                             width: double.infinity,
                             child: Center(
                               child: SizedBox(
                                   width: double.infinity,
-                                  height: 131.44 * fem,
+                                  height: 131.44 * size,
                                   child: pfp != null
                                       ? ClipOval(
                                     child: Image.file(
@@ -150,9 +147,9 @@ class _ProfileEditPageState extends State<ProfileEditPage> {
                           Container(
                             // 5Jz (74219368)
                             margin: EdgeInsets.fromLTRB(
-                                23.14 * fem, 0 * fem, 22.3 * fem, 0 * fem),
+                                23.14 * size, 0 * size, 22.3 * size, 0 * size),
                             width: double.infinity,
-                            height: 17 * fem,
+                            height: 17 * size,
                             child: Center(
                               child: TextButton(
                                 onPressed: () {
@@ -191,15 +188,15 @@ class _ProfileEditPageState extends State<ProfileEditPage> {
                                 ),
                                 child: Container(
                                   width: double.infinity,
-                                  height: 17 * fem,
+                                  height: 17 * size,
                                   child: Center(
                                     child: Text(
                                       'Change Picture',
                                       style: SafeGoogleFont(
                                         'Poppins',
-                                        fontSize: 11.1076917648 * ffem,
+                                        fontSize: 11.1076917648 * sizes,
                                         fontWeight: FontWeight.w400,
-                                        height: 1.5 * ffem / fem,
+                                        height: 1.5 * sizes / size,
                                         color: const Color(0xffffffff),
                                       ),
                                     ),
@@ -217,28 +214,28 @@ class _ProfileEditPageState extends State<ProfileEditPage> {
             ),
             Container(
               margin:
-              EdgeInsets.fromLTRB(33 * fem, 0 * fem, 32.65 * fem, 0 * fem),
+              EdgeInsets.fromLTRB(33 * size, 0 * size, 32.65 * size, 0 * size),
               width: double.infinity,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Container(
                     margin: EdgeInsets.fromLTRB(
-                        0 * fem, 0 * fem, 0 * fem, 17.59 * fem),
+                        0 * size, 0 * size, 0 * size, 17.59 * size),
                     width: double.infinity,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Container(
                           margin: EdgeInsets.fromLTRB(
-                              0 * fem, 0 * fem, 0 * fem, 1.29 * fem),
+                              0 * size, 0 * size, 0 * size, 1.29 * size),
                           child: Text(
                             'Username',
                             style: SafeGoogleFont(
                               'Poppins',
-                              fontSize: 12.9589738846 * ffem,
+                              fontSize: 12.9589738846 * sizes,
                               fontWeight: FontWeight.w500,
-                              height: 1.5 * ffem / fem,
+                              height: 1.5 * sizes / size,
                               color: const Color(0xffffffff),
                             ),
                           ),
@@ -247,7 +244,7 @@ class _ProfileEditPageState extends State<ProfileEditPage> {
                           width: double.infinity,
                           decoration: BoxDecoration(
                             borderRadius:
-                            BorderRadius.circular(7.4051280022 * fem),
+                            BorderRadius.circular(7.4051280022 * size),
                             border: Border.all(color: const Color(0xffa8a8a8)),
                             color: const Color(0xffffffff),
                           ),
@@ -258,17 +255,17 @@ class _ProfileEditPageState extends State<ProfileEditPage> {
                               enabledBorder: InputBorder.none,
                               errorBorder: InputBorder.none,
                               disabledBorder: InputBorder.none,
-                              contentPadding: EdgeInsets.fromLTRB(11.11 * fem,
-                                  10.18 * fem, 11.11 * fem, 9.84 * fem),
+                              contentPadding: EdgeInsets.fromLTRB(11.11 * size,
+                                  10.18 * size, 11.11 * size, 9.84 * size),
                               hintText: 'Gh0stblade',
                               hintStyle:
                               const TextStyle(color: Color(0xff0075ff)),
                             ),
                             style: SafeGoogleFont(
                               'Poppins',
-                              fontSize: 11.1076917648 * ffem,
+                              fontSize: 11.1076917648 * sizes,
                               fontWeight: FontWeight.w400,
-                              height: 1.5 * ffem / fem,
+                              height: 1.5 * sizes / size,
                               color: const Color(0xff000000),
                             ),
                           ),
@@ -278,21 +275,21 @@ class _ProfileEditPageState extends State<ProfileEditPage> {
                   ),
                   Container(
                     margin: EdgeInsets.fromLTRB(
-                        0 * fem, 0 * fem, 0 * fem, 14.81 * fem),
+                        0 * size, 0 * size, 0 * size, 14.81 * size),
                     width: double.infinity,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Container(
                           margin: EdgeInsets.fromLTRB(
-                              0 * fem, 0 * fem, 0 * fem, 1.29 * fem),
+                              0 * size, 0 * size, 0 * size, 1.29 * size),
                           child: Text(
                             'Email',
                             style: SafeGoogleFont(
                               'Poppins',
-                              fontSize: 12.9589738846 * ffem,
+                              fontSize: 12.9589738846 * sizes,
                               fontWeight: FontWeight.w500,
-                              height: 1.5 * ffem / fem,
+                              height: 1.5 * sizes / size,
                               color: const Color(0xffffffff),
                             ),
                           ),
@@ -301,7 +298,7 @@ class _ProfileEditPageState extends State<ProfileEditPage> {
                           width: double.infinity,
                           decoration: BoxDecoration(
                             borderRadius:
-                            BorderRadius.circular(7.4051280022 * fem),
+                            BorderRadius.circular(7.4051280022 * size),
                             border: Border.all(color: const Color(0xffa8a8a8)),
                             color: const Color(0xffffffff),
                           ),
@@ -312,17 +309,17 @@ class _ProfileEditPageState extends State<ProfileEditPage> {
                               enabledBorder: InputBorder.none,
                               errorBorder: InputBorder.none,
                               disabledBorder: InputBorder.none,
-                              contentPadding: EdgeInsets.fromLTRB(11.11 * fem,
-                                  9.26 * fem, 11.11 * fem, 10.77 * fem),
+                              contentPadding: EdgeInsets.fromLTRB(11.11 * size,
+                                  9.26 * size, 11.11 * size, 10.77 * size),
                               hintText: 'richardghost@gmail.com',
                               hintStyle:
                               const TextStyle(color: Color(0xff0075ff)),
                             ),
                             style: SafeGoogleFont(
                               'Poppins',
-                              fontSize: 11.1076917648 * ffem,
+                              fontSize: 11.1076917648 * sizes,
                               fontWeight: FontWeight.w400,
-                              height: 1.5 * ffem / fem,
+                              height: 1.5 * sizes / size,
                               color: const Color(0xff000000),
                             ),
                           ),
@@ -332,21 +329,21 @@ class _ProfileEditPageState extends State<ProfileEditPage> {
                   ),
                   Container(
                     margin: EdgeInsets.fromLTRB(
-                        0 * fem, 0 * fem, 0 * fem, 17.59 * fem),
+                        0 * size, 0 * size, 0 * size, 17.59 * size),
                     width: double.infinity,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Container(
                           margin: EdgeInsets.fromLTRB(
-                              0 * fem, 0 * fem, 0 * fem, 4.07 * fem),
+                              0 * size, 0 * size, 0 * size, 4.07 * size),
                           child: Text(
                             'Phone Number',
                             style: SafeGoogleFont(
                               'Poppins',
-                              fontSize: 12.9589738846 * ffem,
+                              fontSize: 12.9589738846 * sizes,
                               fontWeight: FontWeight.w500,
-                              height: 1.5 * ffem / fem,
+                              height: 1.5 * sizes / size,
                               color: const Color(0xffffffff),
                             ),
                           ),
@@ -355,7 +352,7 @@ class _ProfileEditPageState extends State<ProfileEditPage> {
                           width: double.infinity,
                           decoration: BoxDecoration(
                             borderRadius:
-                            BorderRadius.circular(7.4051280022 * fem),
+                            BorderRadius.circular(7.4051280022 * size),
                             border: Border.all(color: const Color(0xffa8a8a8)),
                             color: const Color(0xffffffff),
                           ),
@@ -366,17 +363,17 @@ class _ProfileEditPageState extends State<ProfileEditPage> {
                               enabledBorder: InputBorder.none,
                               errorBorder: InputBorder.none,
                               disabledBorder: InputBorder.none,
-                              contentPadding: EdgeInsets.fromLTRB(11.11 * fem,
-                                  10.18 * fem, 11.11 * fem, 9.84 * fem),
+                              contentPadding: EdgeInsets.fromLTRB(11.11 * size,
+                                  10.18 * size, 11.11 * size, 9.84 * size),
                               hintText: '+635684972136',
                               hintStyle:
                               const TextStyle(color: Color(0xff0075ff)),
                             ),
                             style: SafeGoogleFont(
                               'Poppins',
-                              fontSize: 11.1076917648 * ffem,
+                              fontSize: 11.1076917648 * sizes,
                               fontWeight: FontWeight.w400,
-                              height: 1.5 * ffem / fem,
+                              height: 1.5 * sizes / size,
                               color: const Color(0xff000000),
                             ),
                           ),
@@ -386,21 +383,21 @@ class _ProfileEditPageState extends State<ProfileEditPage> {
                   ),
                   Container(
                     margin: EdgeInsets.fromLTRB(
-                        0 * fem, 0 * fem, 0 * fem, 60.17 * fem),
+                        0 * size, 0 * size, 0 * size, 60.17 * size),
                     width: double.infinity,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Container(
                           margin: EdgeInsets.fromLTRB(
-                              0 * fem, 0 * fem, 0 * fem, 1.29 * fem),
+                              0 * size, 0 * size, 0 * size, 1.29 * size),
                           child: Text(
                             'Password',
                             style: SafeGoogleFont(
                               'Poppins',
-                              fontSize: 12.9589738846 * ffem,
+                              fontSize: 12.9589738846 * sizes,
                               fontWeight: FontWeight.w500,
-                              height: 1.5 * ffem / fem,
+                              height: 1.5 * sizes / size,
                               color: const Color(0xffffffff),
                             ),
                           ),
@@ -409,7 +406,7 @@ class _ProfileEditPageState extends State<ProfileEditPage> {
                           width: double.infinity,
                           decoration: BoxDecoration(
                             borderRadius:
-                            BorderRadius.circular(7.4051280022 * fem),
+                            BorderRadius.circular(7.4051280022 * size),
                             border: Border.all(color: const Color(0xffa8a8a8)),
                             color: const Color(0xffffffff),
                           ),
@@ -421,17 +418,17 @@ class _ProfileEditPageState extends State<ProfileEditPage> {
                               enabledBorder: InputBorder.none,
                               errorBorder: InputBorder.none,
                               disabledBorder: InputBorder.none,
-                              contentPadding: EdgeInsets.fromLTRB(11.11 * fem,
-                                  10.18 * fem, 11.11 * fem, 9.84 * fem),
+                              contentPadding: EdgeInsets.fromLTRB(11.11 * size,
+                                  10.18 * size, 11.11 * size, 9.84 * size),
                               hintText: '***************',
                               hintStyle:
                               const TextStyle(color: Color(0xff0075ff)),
                             ),
                             style: SafeGoogleFont(
                               'Poppins',
-                              fontSize: 11.1076917648 * ffem,
+                              fontSize: 11.1076917648 * sizes,
                               fontWeight: FontWeight.w400,
-                              height: 1.5 * ffem / fem,
+                              height: 1.5 * sizes / size,
                               color: const Color(0xff000000),
                             ),
                           ),
@@ -441,7 +438,7 @@ class _ProfileEditPageState extends State<ProfileEditPage> {
                   ),
                   Container(
                     margin: EdgeInsets.fromLTRB(
-                        16.66 * fem, 0 * fem, 15.74 * fem, 0 * fem),
+                        16.66 * size, 0 * size, 15.74 * size, 0 * size),
                     child: TextButton(
                       onPressed: () {},
                       style: TextButton.styleFrom(
@@ -449,19 +446,19 @@ class _ProfileEditPageState extends State<ProfileEditPage> {
                       ),
                       child: Container(
                         width: double.infinity,
-                        height: 37.03 * fem,
+                        height: 37.03 * size,
                         decoration: BoxDecoration(
                           color: const Color(0xff0075ff),
-                          borderRadius: BorderRadius.circular(5 * fem),
+                          borderRadius: BorderRadius.circular(5 * size),
                         ),
                         child: Center(
                           child: Text(
                             'Update',
                             style: SafeGoogleFont(
                               'Poppins',
-                              fontSize: 11.0500001907 * ffem,
+                              fontSize: 11.0500001907 * sizes,
                               fontWeight: FontWeight.w500,
-                              height: 1.5 * ffem / fem,
+                              height: 1.5 * sizes / size,
                               color: const Color(0xffffffff),
                             ),
                           ),

@@ -7,21 +7,21 @@ class LandingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double baseWidth = 360;
-    double fem = MediaQuery.of(context).size.width / baseWidth;
-    double ffem = fem * 0.97;
+    double size = MediaQuery.of(context).size.width / baseWidth;
+    double sizes = size * 0.97;
     return SizedBox(
       width: double.infinity,
       child: SizedBox(
         width: double.infinity,
-        height: 800*fem,
+        height: 800*size,
         child: Stack(
           children: [
             Positioned(
-              left: 0*fem,
-              top: 0*fem,
+              left: 0*size,
+              top: 0*size,
               child: Container(
-                width: 360*fem,
-                height: 800*fem,
+                width: 360*size,
+                height: 800*size,
                 decoration: const BoxDecoration (
                   color: Color(0xff19191c),
                   image: DecorationImage (
@@ -34,7 +34,7 @@ class LandingPage extends StatelessWidget {
                 child: Center(
                   child: SizedBox(
                     width: double.infinity,
-                    height: 800*fem,
+                    height: 800*size,
                     child: Container(
                       decoration: const BoxDecoration (
                         color: Color(0x66000000),
@@ -45,12 +45,12 @@ class LandingPage extends StatelessWidget {
               ),
             ),
             Positioned(
-              left: 281*fem,
-              top: 688*fem,
+              left: 281*size,
+              top: 688*size,
               child: Align(
                 child: SizedBox(
-                  width: 52*fem,
-                  height: 52*fem,
+                  width: 52*size,
+                  height: 52*size,
                   child: TextButton(
                     onPressed: (){
 
@@ -60,40 +60,40 @@ class LandingPage extends StatelessWidget {
                     ),
                     child: Image.asset(
                       'assets/app/images/button.png',
-                      width: 52*fem,
-                      height: 52*fem,
+                      width: 52*size,
+                      height: 52*size,
                     ),
                   ),
                 ),
               ),
             ),
             Positioned(
-              left: 27*fem,
-              top: 136*fem,
+              left: 27*size,
+              top: 136*size,
               child: SizedBox(
-                width: 206*fem,
-                height: 116*fem,
+                width: 206*size,
+                height: 116*size,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Container(
-                      margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 19*fem),
-                      width: 142*fem,
+                      margin: EdgeInsets.fromLTRB(0*size, 0*size, 0*size, 19*size),
+                      width: 142*size,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Container(
-                            margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 14*fem),
+                            margin: EdgeInsets.fromLTRB(0*size, 0*size, 0*size, 14*size),
                             width: double.infinity,
                             child: Text(
                               'Welcome to',
                               textAlign: TextAlign.center,
                               style: SafeGoogleFont (
                                 'Poppins',
-                                fontSize: 22*ffem,
+                                fontSize: 22*sizes,
                                 fontWeight: FontWeight.w600,
-                                height: 1*ffem/fem,
-                                letterSpacing: -0.4079999924*fem,
+                                height: 1*sizes/size,
+                                letterSpacing: -0.4079999924*size,
                                 color: const Color(0xff0075ff),
                               ),
                             ),
@@ -102,10 +102,10 @@ class LandingPage extends StatelessWidget {
                             'MyDay',
                             style: SafeGoogleFont (
                               'Poppins',
-                              fontSize: 41*ffem,
+                              fontSize: 41*sizes,
                               fontWeight: FontWeight.w600,
-                              height: 0.5365853659*ffem/fem,
-                              letterSpacing: -0.4079999924*fem,
+                              height: 0.5365853659*sizes/size,
+                              letterSpacing: -0.4079999924*size,
                               color: const Color(0xff0075ff),
                             ),
                           ),
@@ -114,15 +114,15 @@ class LandingPage extends StatelessWidget {
                     ),
                     Container(
                       constraints: BoxConstraints (
-                        maxWidth: 206*fem,
+                        maxWidth: 206*size,
                       ),
                       child: Text(
                         'Wanna record your day? You\'ve chosen the right app.',
                         style: SafeGoogleFont (
                           'Poppins',
-                          fontSize: 13*ffem,
+                          fontSize: 13*sizes,
                           fontWeight: FontWeight.w400,
-                          height: 1.5*ffem/fem,
+                          height: 1.5*sizes/size,
                           color: const Color(0xffffffff),
                         ),
                       ),

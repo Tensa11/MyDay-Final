@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/pages/ProfileEditPage.dart';
-import 'package:myapp/pages/ProfilePage.dart';
 import 'package:myapp/utils.dart';
-import 'pages/LandingPage.dart';
+import 'pages/ProfileEditPage.dart';
+// import 'pages/ProfilePage.dart';
+// import 'pages/LandingPage.dart';
 
 void main() => runApp(const MyDayApp());
 
@@ -12,7 +12,7 @@ class MyDayApp extends StatelessWidget {
 	@override
 	Widget build(BuildContext context) {
 	return MaterialApp(
-		title: 'Flutter',
+		title: 'MyDay',
 		debugShowCheckedModeBanner: false,
 		scrollBehavior: MyCustomScrollBehavior(),
 		theme: ThemeData(
