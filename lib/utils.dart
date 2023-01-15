@@ -31,7 +31,8 @@ TextStyle SafeGoogleFont(
   Color? decorationColor,
   TextDecorationStyle? decorationStyle,
   double? decorationThickness,
-}) {
+  }
+) {
   try {
     return GoogleFonts.getFont(
       fontFamily,
