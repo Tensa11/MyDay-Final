@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/utils.dart';
 import 'ForgotPassLink.dart';
+import 'package:myapp/utils.dart';
 
 class ForgotPass extends StatelessWidget {
   const ForgotPass({super.key});

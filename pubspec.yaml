@@ -76,11 +76,11 @@ flutter:
     - assets/app/images/icon-pencil.png
     - assets/app/images/landing-bg.png
     - assets/app/images/login-bg.png
-    - assets/app/images/logo.png
     - assets/app/images/photo-gallery.png
     - assets/app/images/post-pic.png
     - assets/app/images/next1.png
     - assets/app/images/next2.png
+    - assets/app/images/logo.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

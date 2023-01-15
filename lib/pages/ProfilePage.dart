@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/pages/ProfileEditPage.dart';
 import 'package:myapp/utils.dart';
-
 import 'SignIn.dart';
 
 class ProfilePage extends StatelessWidget {

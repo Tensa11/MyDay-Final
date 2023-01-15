@@ -197,7 +197,6 @@ class PostDetail extends StatelessWidget {
                         ),
                       ),
                       Positioned(
-                        // 2U2 (05987051)
                         left: 320*size,
                         top: 10*size,
                         child: SizedBox(

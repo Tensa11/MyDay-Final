@@ -61,7 +61,7 @@ class HomePage extends StatelessWidget {
                                           fontSize: 12*sizes,
                                           fontWeight: FontWeight.w400,
                                           height: 1.5*sizes/size,
-                                          color: Color(0xff0075ff),
+                                          color: const Color(0xff0075ff),
                                         ),
                                       ),
                                     ),
