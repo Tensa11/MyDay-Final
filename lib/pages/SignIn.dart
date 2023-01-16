@@ -7,8 +7,9 @@ class SignIn extends StatelessWidget {
   SignIn({super.key});
 
   final _formKey = GlobalKey<FormState>();
-  final _name = TextEditingController();
-  bool _validate = false;
+  final _emailController = TextEditingController();
+
+  final bool _validate = false;
   @override
   Widget build(BuildContext context) {
     double baseWidth = 360;
@@ -117,7 +118,7 @@ class SignIn extends StatelessWidget {
                                                           autovalidateMode: AutovalidateMode.onUserInteraction,
 
                                                           child: TextFormField(
-                                                            controller: _name,
+                                                            controller: _emailController,
                                                             keyboardType: TextInputType.emailAddress,
                                                             decoration: InputDecoration(
                                                               border: InputBorder.none,
@@ -164,7 +165,8 @@ class SignIn extends StatelessWidget {
                                                           ),
                                                         ],
                                                       ),
-                                                      child: TextField(
+                                                      child: TextFormField(
+                                                        keyboardType: TextInputType.name,
                                                         obscureText: true,
                                                         decoration: InputDecoration(
                                                           border: InputBorder.none,
@@ -310,12 +312,8 @@ class SignIn extends StatelessWidget {
                                 color: const Color(0xff0075ff),
                                 borderRadius: BorderRadius.circular(25 * size),
                               ),
-                              child: TextButton(
+                              child: ElevatedButton(
                                 onPressed: () {
-                                  // Navigator.push(context,
-                                  //     MaterialPageRoute(builder: (context) => SignUp()
-                                  //     )
-                                  // );
                                 },
                                 child: Text(
                                   'Create Account',

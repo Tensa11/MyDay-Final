@@ -81,3 +81,16 @@ TextStyle SafeGoogleFont(
     );
   }
 }
+
+class UserAcc {
+  String? eMail;
+  String? userName;
+  String? passWord;
+
+  UserAcc({
+    required this.eMail,
+    required this.userName,
+    required this.passWord,
+  }
+      );
+}

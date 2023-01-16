@@ -26,6 +26,11 @@ class _ProfileEditPageState extends State<ProfileEditPage> {
     }
   }
 
+  final _formKey = GlobalKey<FormState>();
+  final _userController = TextEditingController();
+  final _emailController = TextEditingController();
+  final _passController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     double baseWidth = 360;
@@ -43,20 +48,17 @@ class _ProfileEditPageState extends State<ProfileEditPage> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             SizedBox(
-              // navHq4 (136:54)
               width: 361 * size,
               height: 95 * size,
               child: Stack(
                 children: [
                   Positioned(
-                    // dP8 (41536952)
                     left: 0 * size,
                     top: 0 * size,
                     child: SizedBox(
                       width: 360 * size,
                       height: 95 * size,
                       child: Align(
-                        // rectangle45mkE (1:920)
                         alignment: Alignment.centerLeft,
                         child: SizedBox(
                           width: 361 * size,
@@ -71,7 +73,6 @@ class _ProfileEditPageState extends State<ProfileEditPage> {
                     ),
                   ),
                   Positioned(
-                    // WC2 (70950504)
                     left: 143.4743652344 * size,
                     top: 49.984588623 * size,
                     child: SizedBox(
@@ -143,16 +144,15 @@ class _ProfileEditPageState extends State<ProfileEditPage> {
                                   height: 131.44 * size,
                                   child: pfp != null
                                       ? ClipOval(
-                                    child: Image.file(
-                                      pfp!,
-                                      fit: BoxFit.cover,
-                                    ),
-                                  )
+                                        child: Image.file(
+                                          pfp!,
+                                          fit: BoxFit.cover,
+                                        ),
+                                      )
                                       : const FlutterLogo()),
                             ),
                           ),
                           Container(
-                            // 5Jz (74219368)
                             margin: EdgeInsets.fromLTRB(
                                 23.14 * size, 0 * size, 22.3 * size, 0 * size),
                             width: double.infinity,
@@ -193,7 +193,7 @@ class _ProfileEditPageState extends State<ProfileEditPage> {
                                 style: TextButton.styleFrom(
                                   padding: EdgeInsets.zero,
                                 ),
-                                child: Container(
+                                child: SizedBox(
                                   width: double.infinity,
                                   height: 17 * size,
                                   child: Center(
@@ -256,7 +256,9 @@ class _ProfileEditPageState extends State<ProfileEditPage> {
                             border: Border.all(color: const Color(0xffa8a8a8)),
                             color: const Color(0xffffffff),
                           ),
-                          child: TextField(
+                          child: TextFormField(
+                            controller: _userController,
+                            keyboardType: TextInputType.name,
                             decoration: InputDecoration(
                               border: InputBorder.none,
                               focusedBorder: InputBorder.none,
@@ -269,6 +271,9 @@ class _ProfileEditPageState extends State<ProfileEditPage> {
                               hintStyle:
                               const TextStyle(color: Color(0xff0075ff)),
                             ),
+                            validator: (value) {
+                              return (value == '') ? 'Please Enter New Username' : null;
+                            },
                             style: SafeGoogleFont(
                               'Poppins',
                               fontSize: 11.1076917648 * sizes,
@@ -311,7 +316,9 @@ class _ProfileEditPageState extends State<ProfileEditPage> {
                             border: Border.all(color: const Color(0xffa8a8a8)),
                             color: const Color(0xffffffff),
                           ),
-                          child: TextField(
+                          child: TextFormField(
+                            controller: _emailController,
+                            keyboardType: TextInputType.emailAddress,
                             decoration: InputDecoration(
                               border: InputBorder.none,
                               focusedBorder: InputBorder.none,
@@ -324,6 +331,9 @@ class _ProfileEditPageState extends State<ProfileEditPage> {
                               hintStyle:
                               const TextStyle(color: Color(0xff0075ff)),
                             ),
+                            validator: (value) {
+                              return (value == '') ? 'Please Enter New Email' : null;
+                            },
                             style: SafeGoogleFont(
                               'Poppins',
                               fontSize: 11.1076917648 * sizes,
@@ -366,7 +376,7 @@ class _ProfileEditPageState extends State<ProfileEditPage> {
                   //           border: Border.all(color: const Color(0xffa8a8a8)),
                   //           color: const Color(0xffffffff),
                   //         ),
-                  //         child: TextField(
+                  //         child: TextFormField(
                   //           decoration: InputDecoration(
                   //             border: InputBorder.none,
                   //             focusedBorder: InputBorder.none,
@@ -421,7 +431,9 @@ class _ProfileEditPageState extends State<ProfileEditPage> {
                             border: Border.all(color: const Color(0xffa8a8a8)),
                             color: const Color(0xffffffff),
                           ),
-                          child: TextField(
+                          child: TextFormField(
+                            controller: _passController,
+                            keyboardType: TextInputType.name,
                             obscureText: true,
                             decoration: InputDecoration(
                               border: InputBorder.none,
@@ -435,6 +447,9 @@ class _ProfileEditPageState extends State<ProfileEditPage> {
                               hintStyle:
                               const TextStyle(color: Color(0xff0075ff)),
                             ),
+                            validator: (value) {
+                              return (value == '') ? 'Please Enter New Password' : null;
+                            },
                             style: SafeGoogleFont(
                               'Poppins',
                               fontSize: 11.1076917648 * sizes,
@@ -451,13 +466,17 @@ class _ProfileEditPageState extends State<ProfileEditPage> {
                   Container(
                     margin: EdgeInsets.fromLTRB(
                         16.66 * size, 0 * size, 15.74 * size, 0 * size),
-                    child: TextButton(
+                    child: ElevatedButton(
                       onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => const HomePage()
-                            )
-                        );
+                        var isFormValid = _formKey.currentState!.validate();
+                        if (isFormValid) {
+                          UserAcc updateAccount = UserAcc(
+                            userName: _userController.text,
+                            eMail: _emailController.text,
+                            passWord: _passController.text,
+                          );
+                          Navigator.pop(context, updateAccount); // Save to database
+                        }
                       },
                       style: TextButton.styleFrom(
                         padding: EdgeInsets.zero,
