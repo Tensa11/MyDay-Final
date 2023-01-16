@@ -4,7 +4,10 @@ import 'dart:ui';
 import 'package:myapp/utils.dart';
 
 class Signup extends StatelessWidget {
-  const Signup({super.key});
+  Signup({super.key});
+  final _formKey = GlobalKey<FormState>();
+  final bool _validate = false;
+
 
   @override
   Widget build(BuildContext context) {
@@ -13,6 +16,7 @@ class Signup extends StatelessWidget {
     double sizes = size * 0.97;
 
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: SingleChildScrollView(
            child:SizedBox(
         // signuppuF (1:798)
@@ -109,6 +113,7 @@ class Signup extends StatelessWidget {
                                             disabledBorder: InputBorder.none,
                                             contentPadding: EdgeInsets.fromLTRB(9*size, 6.5*size, 9*size, 6.5*size),
                                             hintText: 'Username',
+                                            errorText: _validate ? 'Email' : null,
                                             hintStyle: const TextStyle(color:Color(0xff0075ff)),
                                           ),
                                           style: SafeGoogleFont (
@@ -132,7 +137,7 @@ class Signup extends StatelessWidget {
                                       width: 237*size,
                                       height: 242*size,
                                       child: Image.asset(
-                                        'assets/app/images/pitnav-1-ELq.png',
+                                        'assets/app/images/logo.png',
                                         fit: BoxFit.cover,
                                       ),
                                     ),
@@ -165,6 +170,7 @@ class Signup extends StatelessWidget {
                                 disabledBorder: InputBorder.none,
                                 contentPadding: EdgeInsets.fromLTRB(9*size, 6*size, 9*size, 6*size),
                                 hintText: 'Email',
+                                errorText: _validate? 'Email' :null,
                                 hintStyle: const TextStyle(color:Color(0xff0075ff)),
                               ),
                               style: SafeGoogleFont (

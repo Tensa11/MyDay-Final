@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/pages/sign-up.dart';
 import 'package:myapp/utils.dart';
 import 'ForgotPass.dart';
 import 'HomePage.dart';
@@ -314,6 +315,10 @@ class SignIn extends StatelessWidget {
                               ),
                               child: ElevatedButton(
                                 onPressed: () {
+                                  Navigator.push(context,
+                                      MaterialPageRoute(builder: (context) => Signup()
+                                  )
+                                  );
                                 },
                                 child: Text(
                                   'Create Account',
