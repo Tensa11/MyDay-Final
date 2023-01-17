@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/utils.dart';
+import 'package:profile/profile.dart';
 import 'pages/LandingPage.dart';
 import 'pages/ProfileEditPage.dart';
 import 'package:myapp/pages/ProfilePage.dart';
